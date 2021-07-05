@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Ακύρωση</string>
+    <string name="later">Αργότερα</string>
     <string name="save_as">Αποθήκευση ως</string>
     <string name="file_saved">Αποθηκεύθηκε επιτυχώς</string>
     <string name="invalid_file_format">Μη έγκυρη μορφή αρχείου</string>
@@ -213,7 +214,8 @@
     <string name="background_color">Χρώμα φόντου</string>
     <string name="text_color">Χρώμα κειμένου</string>
     <string name="primary_color">Πρωτεύον χρώμα</string>
-    <string name="accent_color_white">Accent color of white theme</string>
+    <string name="accent_color_white">Χρώμα έμφασης Λευκού θέματος</string>
+    <string name="accent_color_black_and_white">Χρώμα έμφασης του Μαύρου &amp; Λευκού θέματος</string>
     <string name="foreground_color">Χρώμα προσκηνίου</string>
     <string name="app_icon_color">Χρώμα εικονιδίου εφαρμογής</string>
     <string name="bottom_navigation_bar_color">Χρώμα κάτω γραμμής Πλοήγησης</string>
@@ -265,8 +267,8 @@
     <string name="unhide">Επανεμφάνιση</string>
     <string name="hide_folder">Απόκρυψη φακέλου</string>
     <string name="unhide_folder">Επανεμφάνιση φακέλου</string>
-    <string name="temporarily_show_hidden">Προσωρινή Εμφάνιση κρυφών</string>
-    <string name="stop_showing_hidden">Διακοπή εμφάνισης κρυφών μέσων</string>
+    <string name="temporarily_show_hidden">Προσωρινή εμφάνιση κρυφών</string>
+    <string name="stop_showing_hidden">Απόκρυψη κρυφών πολυμέσων</string>
     <string name="maximum_share_reached">Δεν μπορείτε να μοιραστείτε μεγάλο περιεχόμενο ταυτόχρονα</string>
     <string name="empty_and_disable_recycle_bin">Άδειασμα και απενεργοποίηση του Κάδου Ανακύκλωσης</string>
     <string name="undo">Αναίρεση</string>
@@ -278,6 +280,8 @@
     <string name="call_from_sim_1">Κλήση απο SIM 1</string>
     <string name="call_from_sim_2">Κλήση απο SIM 2</string>
     <string name="toggle_filename">Αλλαγή προβολής ονόματος αρχείων</string>
+    <string name="move_to_top">Μετακίνηση στην κορυφή</string>
+    <string name="move_to_bottom">Μετακίνηση στο τέλος</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ταξινόμηση κατά</string>
@@ -349,6 +353,9 @@
     <string name="minutes_raw">λεπτ.</string>
     <string name="hours_raw">ώρ.</string>
     <string name="days_raw">ημερ.</string>
+    <string name="seconds_letter">δ</string>
+    <string name="minutes_letter">λ</string>
+    <string name="hours_letter">ω</string>
 
     <plurals name="seconds">
         <item quantity="one">%d δευτ.</item>
@@ -540,13 +547,16 @@
     <string name="text">Κείμενο</string>
     <string name="migrating">Μετεγκατάσταση</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Διαχείριση εμφανιζόμενων καρτελών</string>
     <string name="default_tab_to_open">Καρτέλα για άνοιγμα κατά την έναρξη της εφαρμογής</string>
     <string name="contacts_tab">Επαφές</string>
     <string name="favorites_tab">Αγαπημένες</string>
     <string name="call_history_tab">Ιστορικό κλήσεων</string>
     <string name="groups_tab">Ομάδες</string>
     <string name="last_used_tab">Τελευταία χρήση</string>
+    <string name="files_tab">Αρχεία</string>
+    <string name="recent_files_tab">Πρόσφατα αρχεία</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Επαναφορά αυτού του αρχείου</string>
@@ -680,6 +690,12 @@
     <string name="rate_us_prompt">Γειά σας,\n\nφαίνεται ότι χρησιμοποιείτε αυτήν την εφαρμογή ήδη για αρκετό καιρό, και το εκτιμούμε πραγματικά.\n\nΑν μπορούμε να σας ζητήσουμε μια χάρη, παρακαλούμε αξιολογήστε μας στο Google Play. Αυτό θα μας βοηθούσε πολύ.\n\nΑνεξάρτητα τι αποφασίσατε, δεν θα εμφανιστεί ξανά αυτό το μήνυμα.\n\nΕυχαριστούμε!</string>
     <string name="rate_our_app">Βαθμολογήστε την εφαρμογή μας παρακαλώ :)</string>
     <string name="thank_you">Σας Ευχαριστούμε</string>
+    <string name="widget_locked_pro">Το widget είναι κλειδωμένο.\nΠαρακαλώ αναβαθμίστε σε Pro έκδοση, για να το ξεκλειδώστε το.</string>
+    <string name="widget_locked">
+        <![CDATA[
+            Αυτό το γραφικό είναι κλειδωμένο.<br>Παρακαλώ αγοράστε το <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> για να το ξεκλειδώσετε.
+        ]]>
+    </string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -772,6 +788,7 @@
     <string name="why_upgrade_no_ads">Χωρίς διαφ/σεις</string>
     <string name="why_upgrade_no_internet_access">Χωρίς πρόσβαση στο internet</string>
     <string name="why_upgrade_footer">+ 100% Εγγύηση επιστροφής χρημάτων</string>
+    <string name="why_upgrade_improved_design">Βελτιωμένος σχεδιασμός</string>
 
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Προηγμένος επεξεργαστής φωτογραφιών</string>
@@ -790,19 +807,24 @@
     <string name="why_upgrade_duplicate_contact_merging">Βελτιωμένη συγχώνευση διπλών επαφών</string>
     <string name="why_upgrade_font_size_customization">Προσαρμογή μεγέθους γραμ/σειράς</string>
     <string name="why_upgrade_private_contact_sharing">Προαιρετική κοινή χρήση ιδιωτικών επαφών στις εφαρμογές μας</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Προσαρμόσιμοι ήχοι κλήσης επαφών</string>
+    <string name="why_upgrade_contact_filtering">Φιλτράρισμα επαφών</string>
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Λίστες ελέγχου</string>
     <string name="why_upgrade_different_note_per_widget">Διαφορετική σημείωση και χρώματα ανά γραφικό συστατικό</string>
+    <string name="why_upgrade_note_locking">Κλείδωμα Σημείωσης</string>
 
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Προσαρμογή μορφής ημ/νίας και ώρας</string>
     <string name="why_upgrade_shortcuts">Συντομεύσεις στην Αρχική οθόνη</string>
     <string name="why_upgrade_file_compression">Υποστήριξη συμπίεσης αρχείων</string>
+    <string name="why_upgrade_recents_tab">Καρτέλα με πρόσφατα αρχεία</string>
 
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Προσαρμογή χρώματος φόντου</string>
     <string name="why_upgrade_file_importing">Υποστήριξη εισαγωγής αρχείων</string>
+    <string name="why_upgrade_zooming">Μεγέθυνση</string>
 
     <!-- License -->
     <string name="notice">Αυτή η εφαρμογή χρησιμοποιεί τις ακόλουθες βιβλιοθήκες τρίτων για να διευκολύνει τη ζωή μου. Ευχαριστώ.</string>

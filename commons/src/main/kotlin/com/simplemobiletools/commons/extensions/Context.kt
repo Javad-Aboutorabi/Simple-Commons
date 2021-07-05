@@ -24,6 +24,7 @@ import android.provider.BlockedNumberContract.BlockedNumbers
 import android.provider.DocumentsContract
 import android.provider.MediaStore.*
 import android.provider.OpenableColumns
+import android.provider.Settings
 import android.telecom.TelecomManager
 import android.telephony.PhoneNumberUtils
 import android.view.View
@@ -59,13 +60,14 @@ fun Context.getSharedPrefs() = getSharedPreferences(PREFS_KEY, Context.MODE_PRIV
 
 val Context.isRTLLayout: Boolean get() = resources.configuration.layoutDirection == View.LAYOUT_DIRECTION_RTL
 
+val Context.areSystemAnimationsEnabled: Boolean get() = Settings.Global.getFloat(contentResolver, Settings.Global.ANIMATOR_DURATION_SCALE, 0f) > 0f
+
 fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAccentColor: Int = 0) {
     val textColor = if (tmpTextColor == 0) baseConfig.textColor else tmpTextColor
     val backgroundColor = baseConfig.backgroundColor
     val accentColor = if (tmpAccentColor == 0) {
         when {
-            isBlackAndWhiteTheme() -> Color.WHITE
-            isWhiteTheme() -> baseConfig.accentColor
+            isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
             else -> baseConfig.primaryColor
         }
     } else {
@@ -73,22 +75,22 @@ fun Context.updateTextColors(viewGroup: ViewGroup, tmpTextColor: Int = 0, tmpAcc
     }
 
     val cnt = viewGroup.childCount
-    (0 until cnt).map { viewGroup.getChildAt(it) }
-        .forEach {
-            when (it) {
-                is MyTextView -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyAppCompatSpinner -> it.setColors(textColor, accentColor, backgroundColor)
-                is MySwitchCompat -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyEditText -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyAutoCompleteTextView -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
-                is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor)
-                is MyButton -> it.setColors(textColor, accentColor, backgroundColor)
-                is ViewGroup -> updateTextColors(it, textColor, accentColor)
-            }
+    (0 until cnt).map { viewGroup.getChildAt(it) }.forEach {
+        when (it) {
+            is MyTextView -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyAppCompatSpinner -> it.setColors(textColor, accentColor, backgroundColor)
+            is MySwitchCompat -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyCompatRadioButton -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyAppCompatCheckbox -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyEditText -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyAutoCompleteTextView -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyFloatingActionButton -> it.setColors(textColor, accentColor, backgroundColor)
+            is MySeekBar -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyButton -> it.setColors(textColor, accentColor, backgroundColor)
+            is MyTextInputLayout -> it.setColors(textColor, accentColor, backgroundColor)
+            is ViewGroup -> updateTextColors(it, textColor, accentColor)
         }
+    }
 }
 
 fun Context.getLinkTextColor(): Int {
@@ -104,8 +106,7 @@ fun Context.isBlackAndWhiteTheme() = baseConfig.textColor == Color.WHITE && base
 fun Context.isWhiteTheme() = baseConfig.textColor == DARK_GREY && baseConfig.primaryColor == Color.WHITE && baseConfig.backgroundColor == Color.WHITE
 
 fun Context.getAdjustedPrimaryColor() = when {
-    isBlackAndWhiteTheme() -> Color.WHITE
-    isWhiteTheme() -> baseConfig.accentColor
+    isWhiteTheme() || isBlackAndWhiteTheme() -> baseConfig.accentColor
     else -> baseConfig.primaryColor
 }
 
@@ -229,19 +230,18 @@ fun Context.getRealPathFromURI(uri: Uri): String? {
 }
 
 fun Context.getDataColumn(uri: Uri, selection: String? = null, selectionArgs: Array<String>? = null): String? {
-    var cursor: Cursor? = null
     try {
         val projection = arrayOf(Files.FileColumns.DATA)
-        cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
-        if (cursor?.moveToFirst() == true) {
-            val data = cursor.getStringValue(Files.FileColumns.DATA)
-            if (data != "null") {
-                return data
+        val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                val data = cursor.getStringValue(Files.FileColumns.DATA)
+                if (data != "null") {
+                    return data
+                }
             }
         }
     } catch (e: Exception) {
-    } finally {
-        cursor?.close()
     }
     return null
 }
@@ -271,6 +271,16 @@ fun Context.getPermissionString(id: Int) = when (id) {
     PERMISSION_SEND_SMS -> Manifest.permission.SEND_SMS
     PERMISSION_READ_PHONE_STATE -> Manifest.permission.READ_PHONE_STATE
     else -> ""
+}
+
+fun Context.launchActivityIntent(intent: Intent) {
+    try {
+        startActivity(intent)
+    } catch (e: ActivityNotFoundException) {
+        toast(R.string.no_app_found)
+    } catch (e: Exception) {
+        showErrorToast(e)
+    }
 }
 
 fun Context.getFilePublicUri(file: File, applicationId: String): Uri {
@@ -303,16 +313,15 @@ fun Context.getMediaContent(path: String, uri: Uri): Uri? {
     val projection = arrayOf(Images.Media._ID)
     val selection = Images.Media.DATA + "= ?"
     val selectionArgs = arrayOf(path)
-    var cursor: Cursor? = null
     try {
-        cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
-        if (cursor?.moveToFirst() == true) {
-            val id = cursor.getIntValue(Images.Media._ID).toString()
-            return Uri.withAppendedPath(uri, id)
+        val cursor = contentResolver.query(uri, projection, selection, selectionArgs, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                val id = cursor.getIntValue(Images.Media._ID).toString()
+                return Uri.withAppendedPath(uri, id)
+            }
         }
     } catch (e: Exception) {
-    } finally {
-        cursor?.close()
     }
     return null
 }
@@ -386,17 +395,34 @@ fun Context.ensurePublicUri(uri: Uri, applicationId: String): Uri {
 }
 
 fun Context.getFilenameFromContentUri(uri: Uri): String? {
-    var cursor: Cursor? = null
+    val projection = arrayOf(
+        OpenableColumns.DISPLAY_NAME
+    )
+
     try {
-        cursor = contentResolver.query(uri, null, null, null, null)
-        if (cursor?.moveToFirst() == true) {
-            return cursor.getStringValue(OpenableColumns.DISPLAY_NAME)
+        val cursor = contentResolver.query(uri, projection, null, null, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return cursor.getStringValue(OpenableColumns.DISPLAY_NAME)
+            }
         }
     } catch (e: Exception) {
-    } finally {
-        cursor?.close()
     }
     return null
+}
+
+fun Context.getSizeFromContentUri(uri: Uri): Long {
+    val projection = arrayOf(OpenableColumns.SIZE)
+    try {
+        val cursor = contentResolver.query(uri, projection, null, null, null)
+        cursor?.use {
+            if (cursor.moveToFirst()) {
+                return cursor.getLongValue(OpenableColumns.SIZE)
+            }
+        }
+    } catch (e: Exception) {
+    }
+    return 0L
 }
 
 fun Context.getSharedTheme(callback: (sharedTheme: SharedTheme?) -> Unit) {
@@ -432,14 +458,11 @@ fun Context.getSharedThemeSync(cursorLoader: CursorLoader): SharedTheme? {
 
 fun Context.getMyContentProviderCursorLoader() = CursorLoader(this, MyContentProvider.MY_CONTENT_URI, null, null, null, null)
 
-fun Context.getMyContactsCursor() = try {
-    CursorLoader(this, MyContactsContentProvider.CONTACTS_CONTENT_URI, null, null, null, null)
-} catch (e: Exception) {
-    null
-}
-
-fun Context.getMyFavoriteContactsCursor() = try {
-    CursorLoader(this, MyContactsContentProvider.CONTACTS_CONTENT_URI, null, MyContactsContentProvider.FAVORITES_ONLY, null, null)
+fun Context.getMyContactsCursor(favoritesOnly: Boolean, withPhoneNumbersOnly: Boolean) = try {
+    val getFavoritesOnly = if (favoritesOnly) "1" else "0"
+    val getWithPhoneNumbersOnly = if (withPhoneNumbersOnly) "1" else "0"
+    val args = arrayOf(getFavoritesOnly, getWithPhoneNumbersOnly)
+    CursorLoader(this, MyContactsContentProvider.CONTACTS_CONTENT_URI, null, null, args, null)
 } catch (e: Exception) {
     null
 }
@@ -897,7 +920,7 @@ val Context.notificationManager: NotificationManager get() = getSystemService(Co
 val Context.shortcutManager: ShortcutManager get() = getSystemService(ShortcutManager::class.java) as ShortcutManager
 
 val Context.portrait get() = resources.configuration.orientation == Configuration.ORIENTATION_PORTRAIT
-val Context.navigationBarRight: Boolean get() = usableScreenSize.x < realScreenSize.x
+val Context.navigationBarRight: Boolean get() = usableScreenSize.x < realScreenSize.x && usableScreenSize.x > usableScreenSize.y
 val Context.navigationBarBottom: Boolean get() = usableScreenSize.y < realScreenSize.y
 val Context.navigationBarHeight: Int get() = if (navigationBarBottom && navigationBarSize.y != usableScreenSize.y) navigationBarSize.y else 0
 val Context.navigationBarWidth: Int get() = if (navigationBarRight) navigationBarSize.x else 0
@@ -1020,4 +1043,10 @@ fun Context.isNumberBlocked(number: String, blockedNumbers: ArrayList<BlockedNum
 
     val numberToCompare = number.trimToComparableNumber()
     return blockedNumbers.map { it.numberToCompare }.contains(numberToCompare) || blockedNumbers.map { it.number }.contains(numberToCompare)
+}
+
+fun Context.copyToClipboard(text: String) {
+    val clip = ClipData.newPlainText(getString(R.string.simple_commons), text)
+    (getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager).setPrimaryClip(clip)
+    toast(R.string.value_copied_to_clipboard)
 }

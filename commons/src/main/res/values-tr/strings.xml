@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">Tamam</string>
     <string name="cancel">İptal</string>
+    <string name="later">Sonra</string>
     <string name="save_as">Farklı kaydet</string>
     <string name="file_saved">Dosya başarıyla kaydedildi</string>
     <string name="invalid_file_format">Geçersiz dosya biçimi</string>
@@ -214,6 +215,7 @@
     <string name="text_color">Metin rengi</string>
     <string name="primary_color">Ana renk</string>
     <string name="accent_color_white">Beyaz temanın vurgu rengi</string>
+    <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
     <string name="foreground_color">Ön plan rengi</string>
     <string name="app_icon_color">Uygulama simgesi rengi</string>
     <string name="bottom_navigation_bar_color">Alt gezinti çubuğu rengi</string>
@@ -278,6 +280,8 @@
     <string name="call_from_sim_1">SIM 1\'den ara</string>
     <string name="call_from_sim_2">SIM 2\'den ara</string>
     <string name="toggle_filename">Dosya adı görünürlüğünü aç/kapat</string>
+    <string name="move_to_top">Üste taşı</string>
+    <string name="move_to_bottom">Alta taşı</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sıralama ölçütü</string>
@@ -349,6 +353,9 @@
     <string name="minutes_raw">dakika</string>
     <string name="hours_raw">saat</string>
     <string name="days_raw">gün</string>
+    <string name="seconds_letter">s</string>
+    <string name="minutes_letter">m</string>
+    <string name="hours_letter">h</string>
 
     <plurals name="seconds">
         <item quantity="one">%d saniye</item>
@@ -540,13 +547,16 @@
     <string name="text">Metin</string>
     <string name="migrating">Geçiş</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Gösterilen sekmeleri yönet</string>
     <string name="default_tab_to_open">Uygulama başlatıldığında açılacak sekme</string>
     <string name="contacts_tab">Kişiler</string>
     <string name="favorites_tab">Favoriler</string>
     <string name="call_history_tab">Arama Geçmişi</string>
     <string name="groups_tab">Gruplar</string>
     <string name="last_used_tab">Son kullanılan</string>
+    <string name="files_tab">Files</string>
+    <string name="recent_files_tab">Son Dosyalar</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Bu dosyayı geri yükle</string>
@@ -680,6 +690,12 @@
     <string name="rate_us_prompt">Merhaba,\n\nzaten bir süredir bu uygulamayı kullanıyor gibi görünüyorsunuz ve gerçekten takdir ediyoruz.\n\nSizden bir iyilik isteyebilirsek, lütfen bizi Google Play\'de oylayın. Bu bize gerçekten çok yardımcı olacak.\n\nNasıl karar verirseniz verin, bu mesajı bir daha görmeyeceksiniz.\n\nTeşekkürler!</string>
     <string name="rate_our_app">Lütfen uygulamamızı oylayın :)</string>
     <string name="thank_you">Teşekkürler</string>
+    <string name="widget_locked_pro">The widget is locked.\nPlease upgrade to the Pro version to unlock it.</string>
+    <string name="widget_locked">
+        <![CDATA[
+            The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
+        ]]>
+    </string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -769,6 +785,7 @@
     <string name="why_upgrade_no_ads">Reklamsız</string>
     <string name="why_upgrade_no_internet_access">İnternet erişimi yok</string>
     <string name="why_upgrade_footer">+ %100 Para İadesi Garantisi</string>
+    <string name="why_upgrade_improved_design">Geliştirilmiş tasarım</string>
 
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Gelişmiş fotoğraf düzenleyici</string>
@@ -787,19 +804,24 @@
     <string name="why_upgrade_duplicate_contact_merging">Rehberde tekrarlanan kişilerin birleştirilmesi</string>
     <string name="why_upgrade_font_size_customization">Metin boyutu kişiselleştirme</string>
     <string name="why_upgrade_private_contact_sharing">Uygulamalarımız arasında tercihe bağlı rehber bilgileri paylaşma</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Özelleştirilebilir kişi zil sesleri</string>
+    <string name="why_upgrade_contact_filtering">Kişi filtreleme</string>
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Kontrol listeleri</string>
     <string name="why_upgrade_different_note_per_widget">Her araç için farklı not ve renkler</string>
+    <string name="why_upgrade_note_locking">Note locking</string>
 
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Saat ve tarih formatını kişiselleştirme</string>
     <string name="why_upgrade_shortcuts">Ana sayfada kısayollar</string>
     <string name="why_upgrade_file_compression">Dosya sıkıştırma desteği</string>
+    <string name="why_upgrade_recents_tab">Son dosyaların bulunduğu sekme</string>
 
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Arka plan renklerini kişiselleştirme</string>
     <string name="why_upgrade_file_importing">Dosya ekleme desteği</string>
+    <string name="why_upgrade_zooming">Yakınlaştırma</string>
 
     <!-- License -->
     <string name="notice">Bu uygulama hayatımı kolaylaştırmak için aşağıdaki üçüncü taraf kitaplıklarını kullanır. Teşekkürler.</string>

@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">موافق</string>
     <string name="cancel">إلغاء</string>
+    <string name="later">Later</string>
     <string name="save_as">حفظ كـ</string>
     <string name="file_saved">تم حفظ الملف بنجاح</string>
     <string name="invalid_file_format">تنسيق الملف غير صالح</string>
@@ -213,6 +214,7 @@
     <string name="text_color">لون النص</string>
     <string name="primary_color">اللون الأساسي</string>
     <string name="accent_color_white">Accent color of white theme</string>
+    <string name="accent_color_black_and_white">Accent color of Black &amp; White theme</string>
     <string name="foreground_color">لون المقدمة</string>
     <string name="app_icon_color">لون أيقونة التطبيق</string>
     <string name="bottom_navigation_bar_color">لون شريط التنقل السفلي</string>
@@ -276,6 +278,8 @@
     <string name="call_from_sim_1">Call from SIM 1</string>
     <string name="call_from_sim_2">Call from SIM 2</string>
     <string name="toggle_filename">تبديل رؤية إسم الملف</string>
+    <string name="move_to_top">Move to the top</string>
+    <string name="move_to_bottom">Move to the bottom</string>
 
     <!-- Sorting -->
     <string name="sort_by">فرز حسب</string>
@@ -347,6 +351,9 @@
     <string name="minutes_raw">دقائق</string>
     <string name="hours_raw">ساعات</string>
     <string name="days_raw">أيام</string>
+    <string name="seconds_letter">s</string>
+    <string name="minutes_letter">m</string>
+    <string name="hours_letter">h</string>
 
     <plurals name="seconds">
         <item quantity="one">%d ثانية</item>
@@ -538,13 +545,16 @@
     <string name="text">النص</string>
     <string name="migrating"> إعدادات التصدير / الإستيراد</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">إدارة التابات المعروضة</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
     <string name="contacts_tab">Contacts</string>
     <string name="favorites_tab">Favorites</string>
     <string name="call_history_tab">Call History</string>
     <string name="groups_tab">Groups</string>
     <string name="last_used_tab">Last used one</string>
+    <string name="files_tab">Files</string>
+    <string name="recent_files_tab">Recent files</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">إستعادة هذا الملف</string>
@@ -678,6 +688,12 @@
     <string name="rate_us_prompt">مرحباً,\n\nيبدو أنك تستخدم هذا التطبيق لفترة طويلة بالفعل, ونحن نقدر ذلك حقاً.\n\nإذا استطعنا أن نطلب منك خدمة, فيرجى تقييمنا على Google Play. هذا سيساعدنا كثيراً \n\nوبغض النظر عن قرارك, لن تري هذه الرسالة مره أخري.\n\nشكراً!</string>
     <string name="rate_our_app">قيم تطبيقنا من فضلك :)</string>
     <string name="thank_you">شكراً جزيلاً</string>
+    <string name="widget_locked_pro">The widget is locked.\nPlease upgrade to the Pro version to unlock it.</string>
+    <string name="widget_locked">
+        <![CDATA[
+            The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
+        ]]>
+    </string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -765,6 +781,7 @@
     <string name="why_upgrade_no_ads">No ads</string>
     <string name="why_upgrade_no_internet_access">No internet access</string>
     <string name="why_upgrade_footer">+ 100% Money Back Guarantee</string>
+    <string name="why_upgrade_improved_design">Improved design</string>
 
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Advanced photo editor</string>
@@ -783,19 +800,24 @@
     <string name="why_upgrade_duplicate_contact_merging">Improved duplicate contact merging</string>
     <string name="why_upgrade_font_size_customization">Font size customization</string>
     <string name="why_upgrade_private_contact_sharing">Optional private contact sharing within our apps</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Customizable contact ringtones</string>
+    <string name="why_upgrade_contact_filtering">Contact filtering</string>
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Checklists</string>
     <string name="why_upgrade_different_note_per_widget">Different note and colors per widget</string>
+    <string name="why_upgrade_note_locking">Note locking</string>
 
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Date and time format customization</string>
     <string name="why_upgrade_shortcuts">Home screen shortcuts</string>
     <string name="why_upgrade_file_compression">File compression support</string>
+    <string name="why_upgrade_recents_tab">Tab with recent files</string>
 
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Background color customization</string>
     <string name="why_upgrade_file_importing">File importing support</string>
+    <string name="why_upgrade_zooming">Zooming</string>
 
     <!-- License -->
     <string name="notice">يستخدم هذا التطبيق مكتبات الجهات الخارجية التالية لتسهيل حياتي.شكراً.</string>

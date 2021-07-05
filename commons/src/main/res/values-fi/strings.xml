@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Peruuta</string>
+    <string name="later">Myöhemmin</string>
     <string name="save_as">Tallenna nimellä</string>
     <string name="file_saved">Tallennettu</string>
     <string name="invalid_file_format">Virheellinen tiedostomuoto</string>
@@ -214,6 +215,7 @@
     <string name="text_color">Tekstin väri</string>
     <string name="primary_color">Ensisijainen väri</string>
     <string name="accent_color_white">Valkoisen teeman aksenttiväri</string>
+    <string name="accent_color_black_and_white">Mustavalkoisen teeman aksenttiväri</string>
     <string name="foreground_color">Etualan väri</string>
     <string name="app_icon_color">Sovelluksen ikonin väri</string>
     <string name="bottom_navigation_bar_color">Alapalkin väri</string>
@@ -278,6 +280,8 @@
     <string name="call_from_sim_1">Soita SIM 1-kortilla</string>
     <string name="call_from_sim_2">Soita SIM 2-kortilla</string>
     <string name="toggle_filename">Tiedostonimien näkyvyys</string>
+    <string name="move_to_top">Siirrä ylimmäksi</string>
+    <string name="move_to_bottom">Siirrä alimmaksi</string>
 
     <!-- Sorting -->
     <string name="sort_by">Järjestä</string>
@@ -349,6 +353,9 @@
     <string name="minutes_raw">minuutit</string>
     <string name="hours_raw">tunnit</string>
     <string name="days_raw">päivät</string>
+    <string name="seconds_letter">s</string>
+    <string name="minutes_letter">m</string>
+    <string name="hours_letter">h</string>
 
     <plurals name="seconds">
         <item quantity="one">%d sekunti</item>
@@ -540,13 +547,16 @@
     <string name="text">Teksti</string>
     <string name="migrating">Yhdistäminen</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Valitse sovelluksen välilehdet</string>
     <string name="default_tab_to_open">Välilehti, joka avataan sovelluksen käynnistyessä</string>
     <string name="contacts_tab">Yhteystiedot</string>
     <string name="favorites_tab">Suosikit</string>
     <string name="call_history_tab">Puheluhistoria</string>
     <string name="groups_tab">Ryhmät</string>
     <string name="last_used_tab">Viimeksi käytetty</string>
+    <string name="files_tab">Tiedostot</string>
+    <string name="recent_files_tab">Viimeksi käytetyt tiedostot</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Palauta tämä tiedosto</string>
@@ -680,6 +690,12 @@
     <string name="rate_us_prompt">Hei,\n\nnäyttää siltä, että olet käyttänyt tätä sovellusta jo jonkin aikaa, arvostamme sitä.\n\nPyytäisimme sinua lisäämään arvostelun Google Playhyn, se auttaisi meitä paljon.\n\Huolimatta siitä miten toimit, et nää tätä viestä enää.\n\nKiitos!</string>
     <string name="rate_our_app">Arvostele sovelluksemme, kiitos :)</string>
     <string name="thank_you">Kiitos</string>
+    <string name="widget_locked_pro">Pienoissovellus on käytössä vain Pro-versiossa.</string>
+    <string name="widget_locked">
+        <![CDATA[
+            Pienoissovellus on lukittu.<br>Osta <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> avataksesi lukituksen.
+        ]]>
+    </string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -769,6 +785,7 @@
     <string name="why_upgrade_no_ads">Ei mainoksia</string>
     <string name="why_upgrade_no_internet_access">Ei internetyhteyttä</string>
     <string name="why_upgrade_footer">+ 100% rahat takaisin-takuu</string>
+    <string name="why_upgrade_improved_design">Kehittyneempi ulkoasu</string>
 
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Kehittyt valokuvaeditori</string>
@@ -787,19 +804,24 @@
     <string name="why_upgrade_duplicate_contact_merging">Paranneltu kontaktikopioiden yhdistäminen</string>
     <string name="why_upgrade_font_size_customization">Fonttikoon kustomointi</string>
     <string name="why_upgrade_private_contact_sharing">Vaihtoehtona sovellustemme välinen kontaktien jako</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Mukautetut kontaktien soittoäänet </string>
+    <string name="why_upgrade_contact_filtering">Contact filtering</string>
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Tarkistuslistat</string>
     <string name="why_upgrade_different_note_per_widget">Pienoissovelluskohtainen muistiinpano ja värit</string>
+    <string name="why_upgrade_note_locking">Muistiinpanojen lukitseminen</string>
 
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Päivämäärän ja ajan näyttömuotojen kustomointi</string>
     <string name="why_upgrade_shortcuts">Pikakuvakkeet kotivalikkoon</string>
     <string name="why_upgrade_file_compression">Tuki tiedostojen pakkaukselle</string>
+    <string name="why_upgrade_recents_tab">Viimeisimmät tiedostot-välilehti</string>
 
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Taustavärin kustomointi</string>
     <string name="why_upgrade_file_importing">Tuki tiedostojen tuonnille</string>
+    <string name="why_upgrade_zooming">Zooming</string>
 
     <!-- License -->
     <string name="notice">Tämä sovellus käyttää kolmannen osapuolen lisenssejä tehdäkseni elämästäni helpompaa. Kiitos.</string>

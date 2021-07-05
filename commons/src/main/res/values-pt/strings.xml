@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Cancelar</string>
+    <string name="later">Mais tarde</string>
     <string name="save_as">Guardar como</string>
     <string name="file_saved">Ficheiro guardado com sucesso</string>
     <string name="invalid_file_format">Formato de ficheiro inválido</string>
@@ -142,7 +143,7 @@
     <string name="file_already_exists">Já existe um ficheiro com o nome \"%s\"</string>
     <string name="file_already_exists_overwrite">Já existe um ficheiro com o nome \"%s\". Substituir?</string>
     <string name="folder_already_exists">Já existe uma pasta com o nome \"%s\"</string>
-    <string name="merge">Unir</string>
+    <string name="merge">Combinar</string>
     <string name="keep_both">Manter ambos</string>
     <string name="overwrite">Substituir</string>
     <string name="skip">Ignorar</string>
@@ -213,7 +214,8 @@
     <string name="background_color">Cor de fundo</string>
     <string name="text_color">Cor do tipo de letra</string>
     <string name="primary_color">Cor primária</string>
-    <string name="accent_color_white">Accent color of white theme</string>
+    <string name="accent_color_white">Cor de destaque para o tema Branco</string>
+    <string name="accent_color_black_and_white">Cor de destaque para o tema Preto e branco</string>
     <string name="foreground_color">Cor secundária</string>
     <string name="app_icon_color">Cor do ícone da aplicação</string>
     <string name="bottom_navigation_bar_color">Cor da barra de navegação inferior</string>
@@ -244,7 +246,7 @@
     <string name="dark_theme">Escuro</string>
     <string name="solarized">Solar</string>
     <string name="dark_red">Vermelho escuro</string>
-    <string name="white">White</string>
+    <string name="white">Branco</string>
     <string name="black_white">Preto e branco</string>
     <string name="custom">Personalizado</string>
     <string name="shared">Partilhado</string>
@@ -260,7 +262,7 @@
     <string name="share">Partilhar</string>
     <string name="share_via">Partilhar por</string>
     <string name="select_all">Selecionar tudo</string>
-    <string name="select_text">Select text</string>
+    <string name="select_text">Selecionar texto</string>
     <string name="hide">Ocultar</string>
     <string name="unhide">Mostrar</string>
     <string name="hide_folder">Ocultar pasta</string>
@@ -274,10 +276,12 @@
     <string name="print">Imprimir</string>
     <string name="create_shortcut">Criar atalho</string>
     <string name="add_number_to_contact">Adicionar número a um contacto existente</string>
-    <string name="view_contact_details">View contact details</string>
+    <string name="view_contact_details">Ver detalhes do contacto</string>
     <string name="call_from_sim_1">Ligar do SIM 1</string>
     <string name="call_from_sim_2">Ligar do SIM 2</string>
     <string name="toggle_filename">Mostrar/ocultar nome do ficheiro</string>
+    <string name="move_to_top">Mover para cima</string>
+    <string name="move_to_bottom">Mover para baixo</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar por</string>
@@ -329,7 +333,7 @@
     <string name="repeat_pattern">Repita o padrão</string>
     <string name="fingerprint">Impressão digital</string>
     <string name="add_fingerprint">Adicionar impressão digital</string>
-    <string name="place_finger">Coloque o seu dedo no sensor de impressões digitais</string>
+    <string name="place_finger">Coloque o dedo no sensor de impressões digitais</string>
     <string name="authentication_failed">Falha de autenticação</string>
     <string name="authentication_blocked">Autenticação bloqueada. Por favor tente mais tarde.</string>
     <string name="no_fingerprints_registered">Não tem impressões digitais registadas. Adicione a sua impressão digital nas definições do dispositivo.</string>
@@ -349,6 +353,9 @@
     <string name="minutes_raw">minutos</string>
     <string name="hours_raw">horas</string>
     <string name="days_raw">dias</string>
+    <string name="seconds_letter">s</string>
+    <string name="minutes_letter">m</string>
+    <string name="hours_letter">h</string>
 
     <plurals name="seconds">
         <item quantity="one">%d segundo</item>
@@ -486,8 +493,8 @@
     <string name="your_sounds">Meus sons</string>
     <string name="add_new_sound">Adicionar um novo som</string>
     <string name="no_sound">Sem som</string>
-    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
-    <string name="during_day_at">During the day at %02d:%02d</string>
+    <string name="during_day_at_hh_mm">Durante o dia às hh:mm</string>
+    <string name="during_day_at">Durante o dia às %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Definições</string>
@@ -495,7 +502,7 @@
     <string name="customize_colors">Personalizar cores</string>
     <string name="customize_colors_locked">Personalizar cores (Bloqueado)</string>
     <string name="customize_widget_colors">Personalizar cores do widget</string>
-    <string name="customize_notifications">Customize notifications</string>
+    <string name="customize_notifications">Personalizar notificações</string>
     <string name="use_english_language">Utilizar aplicação em inglês</string>
     <string name="show_hidden_items">Mostrar itens ocultos</string>
     <string name="font_size">Tamanho do texto</string>
@@ -527,7 +534,7 @@
     <string name="settings_exported_successfully">Definições exportadas com sucesso</string>
     <string name="settings_imported_successfully">Definições importadas com sucesso</string>
     <string name="start_name_with_surname">Ordenar por apelido</string>
-    <string name="clear_cache">Clear cache</string>
+    <string name="clear_cache">Limpar cache</string>
 
     <!-- Setting sections -->
     <string name="visibility">Exibição</string>
@@ -540,13 +547,16 @@
     <string name="text">Texto</string>
     <string name="migrating">Migração</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Gerir separadores a mostrar</string>
     <string name="default_tab_to_open">Separador a mostrar ao iniciar</string>
     <string name="contacts_tab">Contactos</string>
     <string name="favorites_tab">Favoritos</string>
     <string name="call_history_tab">Histórico de chamadas</string>
     <string name="groups_tab">Grupos</string>
     <string name="last_used_tab">Último utilizado</string>
+    <string name="files_tab">Files</string>
+    <string name="recent_files_tab">Arquivos recentes</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restaurar este ficheiro</string>
@@ -680,6 +690,12 @@
     <string name="rate_us_prompt">Olá,\n\nparece que está a utilizar esta aplicação há algum tempo, o que nos deixa satisfeitos.\n\nGostaríamos de lhe pedir o favor de nos avaliar na Google Play. Isso iria ajudar-nos bastante.\n\nIndependentemente da sua escolha, esta mensagem não será mostrada novamente.\n\nObrigado!</string>
     <string name="rate_our_app">Avalie a nossa aplicação :)</string>
     <string name="thank_you">Obrigado</string>
+    <string name="widget_locked_pro">O widget está bloqueado.\nAtualize para a versão Pro para desbloqueá-lo.</string>
+    <string name="widget_locked">
+        <![CDATA[
+            The widget is locked.<br>Please purchase <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> to unlock it.
+        ]]>
+    </string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -737,33 +753,31 @@
     <!-- FAQ -->
     <string name="frequently_asked_questions">Perguntas frequentes</string>
     <string name="before_asking_question">Antes de colocar uma questão, leia as</string>
-    <string name="faq_1_title_commons">How come I don\'t see this apps widget on the list of widgets?</string>
-    <string name="faq_1_text_commons">It is most likely because you moved the app on an SD card. There is an Android system limitation which hides the given app widgets
-        in that case. The only solution is to move the app back onto the Internal Storage via your device settings.</string>
-    <string name="faq_2_title_commons">I want to support you, but I cannot donate money. Is there anything else I can do?</string>
-    <string name="faq_2_text_commons">Yes, of course. You can spread the word about the apps or give good feedback and ratings. You can also help by translating the apps in a new language, or just update some existing translations.
-        You can find the guide at https://github.com/SimpleMobileTools/General-Discussion , or just shoot me a message at hello@simplemobiletools.com if you need help.</string>
-    <string name="faq_3_title_commons">I deleted some files by mistake, how can I recover them?</string>
-    <string name="faq_3_text_commons">Sadly, you cannot. Files are deleted instantly after the confirmation dialog, there is no trashbin available.</string>
-    <string name="faq_4_title_commons">I don\'t like the widget colors, can I change them?</string>
-    <string name="faq_4_text_commons">Yep, as you drag a widget on your home screen a widget config screen appears. You will see colored squares at the bottom left corner, just press them to pick a new color. You can use the slider for adjusting the alpha too.</string>
-    <string name="faq_5_title_commons">Can I somehow restore deleted files?</string>
-    <string name="faq_5_text_commons">If they were really deleted, you cannot. However, there is a Recycle Bin enabled by default, it will cause the files just be moved in the Bin instead of deleting them.</string>
-    <string name="faq_6_title_commons">The app launcher icon disappeared. What can I do?</string>
-    <string name="faq_6_text_commons">It is caused by your launcher not supporting icon customization properly. Try launching the app via Google Play or some widget, if available.
-        Once launched, just set back the default orange icon #F57C00. You might have to reinstall the app in the worst case.</string>
-    <string name="faq_7_title_commons">The money has been deducted from my bank account, but I cannot download the app. What can I do?</string>
-    <string name="faq_7_text_commons">Payments are fully handled by Google, their system glitches from time to time. Just clear your Google Play app cache and restart your device, then retry downloading it.</string>
-    <string name="faq_8_title_commons">Why should I upgrade to the Pro version?</string>
-    <string name="faq_8_text_commons">As your app version is no longer updated, the bugs you have maybe spotted will never be fixed. There will also be no new functions added. You can purchase the Pro version on Google Play for a small sum of money.
-        It is a one time payment, which means that once you purchase it, you will never have to pay again. Not even after getting a new device. If you won\'t like the Pro version, you can just uninstall it within a few hours and you will automatically get your money back.
-        If you want a refund anytime later, just contact us at hello@simplemobiletools.com and you will get it.</string>
-    <string name="faq_9_title_commons">How can I select multiple items at once?</string>
-    <string name="faq_9_text_commons">There are multiple ways of doing that. The first one is starting the selection mode by long pressing one item, then short clicking on others to select them. The second way is similar to selecting items on PCs with a mouse,
-        just start the selection mode by long pressing one item, then with your finger still down drag it across other items for selecting. The third way of selecting multiple items is long pressing one item, then long pressing another one and everything in between gets selected. If you
-        want to select all items, just long press one item, then click at the selected item counter at the top left corner. That will select or unselect all everything.</string>
-    <string name="faq_10_title_commons">I have purchased the app, but I cannot download it on another device.</string>
-    <string name="faq_10_text_commons">Try clearing your Google Play app cache and restarting your device. It is some Google Play glitch, not really related to the app itself.</string>
+    <string name="faq_1_title_commons">Por que não vejo o widget deste aplicativo na lista de widgets?</string>
+    <string name="faq_1_text_commons">O mais provável é que você tenha movido o aplicativo para um cartão SD. Existe uma limitação do sistema Android que oculta os widgets de aplicativos fornecidos neste caso.
+        A única solução é mover o aplicativo de volta para o Armazenamento Interno por meio das configurações do seu dispositivo.</string>
+    <string name="faq_2_title_commons">Eu gostaria de apoiá-los, mas não posso doar dinheiro. Há algo mais que eu possa fazer?</string>
+    <string name="faq_2_text_commons">Claro. Você pode divulgar os aplicativos ou dar um bom feedback e classificação. Você também pode ajudar traduzindo os aplicativos em um novo idioma ou apenas atualizando algumas traduções existentes.
+        Você pode encontrar o guia em https://github.com/SimpleMobileTools/General-Discussion , ou apenas me mande uma mensagem em hello@simplemobiletools.com se precisar de ajuda.</string>
+    <string name="faq_3_title_commons">Eu exclui alguns arquivos por engano, como posso recuperá-los?</string>
+    <string name="faq_3_text_commons">Infelizmente, você não pode. Os arquivos são apagados instantaneamente após a caixa de diálogo de confirmação, não há lixeira disponível.</string>
+    <string name="faq_4_title_commons">Eu não gosto das cores do widget, posso mudá-las?</string>
+    <string name="faq_4_text_commons">Sim, enquanto você arrasta um widget em sua tela inicial, uma tela de configuração do widget aparece. Você verá quadrados coloridos no canto inferior esquerdo, basta pressioná-los para escolher uma nova cor. Você também pode usar o controle deslizante para ajustar a transparência (alfa).</string>
+    <string name="faq_5_title_commons">Posso restaurar de alguma forma os arquivos apagados?</string>
+    <string name="faq_5_text_commons">Por padrão os arquivos são movidos para a Lixeira. No entanto, se a Lixeira tiver sido desativada os arquivos serão removidos permanentemente.</string>
+    <string name="faq_6_title_commons">O ícone do app desapareceu. O que posso fazer?</string>
+    <string name="faq_6_text_commons">Isso deve ter ocorrido porque o seu lançador de aplicativos não suporta corretamente a customização de ícones. Tente abrir o app pela loja do Google Play ou por um widget, se possível.
+    Uma vez aberto o app, configure a cor do ícone de volta para o valor padrão (laranja #F57C00). No pior dos casos pode ser preciso reinstalar o app.</string>
+    <string name="faq_7_title_commons">O dinheiro foi deduzido da minha conta bancária, mas não consigo fazer o download do aplicativo. O que eu posso fazer?</string>
+    <string name="faq_7_text_commons">Os pagamentos são totalmente gerenciados pelo Google, o sistema deles falha de vez em quanto. Apenas limpe o cache do aplicativo Google Play, reinicie o dispositivo e tente baixá-lo novamente.</string>
+    <string name="faq_8_title_commons">Por que eu deveria atualizar para a versão Pro?</string>
+    <string name="faq_8_text_commons">Como a versão do seu aplicativo não é mais atualizada, os erros que você talvez tenha encontrado nunca serão corrigidos. Também não haverá novas funções adicionadas. Você pode comprar a versão Pro no Google Play por uma pequena quantia em dinheiro.
+        É um pagamento único, o que significa que, uma vez que você o compre, nunca precisará pagar novamente. Nem mesmo depois de adquirir um novo dispositivo. Se você não gostar da versão Pro, basta desinstalá-la em algumas horas e você receberá seu dinheiro automaticamente.
+        Se você quiser um reembolso a qualquer momento depois, basta entrar em contato conosco pelo e-mail hello@simplemobiletools.com e você o receberá.</string>
+    <string name="faq_9_title_commons">Como posso selecionar múltiplos itens de uma só vez?</string>
+    <string name="faq_9_text_commons">Existem muitas formas de fazer isso. A primeira delas é acessar o modo de seleção, mantendo um item pressionado e clicando nos demais para selecioná-los. A segunda maneira é similar à seleção de itens com um mouse em um computador: basta acessar o modo de seleção, mantendo um item pressionado e arrastar seu dedo para selecionar os demais itens. A terceira forma de seleção múltipla é manter um item pressionado e, em seguida, pressionar outro para que todos os itens entre eles sejam selecionados. Caso deseje selecionar todos os itens, basta manter um deles pressionado e clicar na contagem de itens selecionados no canto superior esquerdo da tela. Essa ação selecionará ou removerá a seleção de todos os itens.</string>
+    <string name="faq_10_title_commons">Comprei o aplicativo, mas não consigo realizar seu download em outro dispositivo.</string>
+    <string name="faq_10_text_commons">Experimente limpar o cache do aplicativo Google Play e reiniciar seu dispositivo. Trata-se de uma falha do Google Play e não está relacionada ao aplicativo em si.</string>
 
     <!-- Pro comparison (shown in the deprecated free apps) -->
     <string name="why_upgrade">Atualize para a versão Pro agora!</string>
@@ -772,6 +786,7 @@
     <string name="why_upgrade_no_ads">Sem anúncios</string>
     <string name="why_upgrade_no_internet_access">Sem acesso à Internet</string>
     <string name="why_upgrade_footer">+ Garantia 100% de reembolso</string>
+    <string name="why_upgrade_improved_design">Design melhorado</string>
 
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor de fotos avançado</string>
@@ -790,19 +805,24 @@
     <string name="why_upgrade_duplicate_contact_merging">Melhorias na junção de contactos duplicados</string>
     <string name="why_upgrade_font_size_customization">Personalização do tipo de letra</string>
     <string name="why_upgrade_private_contact_sharing">Partilha opcional de contactos entre as aplicações Simple</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Possibilidade de personalizar toques por contacto</string>
+    <string name="why_upgrade_contact_filtering">Filtragem de contatos</string>
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Listas</string>
-    <string name="why_upgrade_different_note_per_widget">Notas e cores diferentes por widgets</string>
+    <string name="why_upgrade_different_note_per_widget">Notas e cores diferentes por widget</string>
+    <string name="why_upgrade_note_locking">Note locking</string>
 
     <!-- File Manager Pro -->
-    <string name="why_upgrade_date_and_time_format">Personalização do formato de data e hora</string>
+    <string name="why_upgrade_date_and_time_format">Personalização do formato de data e de hora</string>
     <string name="why_upgrade_shortcuts">Atalhos no ecrã principal</string>
     <string name="why_upgrade_file_compression">Suporte para compressão de arquivos</string>
+    <string name="why_upgrade_recents_tab">Guia com arquivos recentes</string>
 
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Personalização da cor de fundo</string>
     <string name="why_upgrade_file_importing">Suporte a importação de ficheiros</string>
+    <string name="why_upgrade_zooming">Ampliando</string>
 
     <!-- License -->
     <string name="notice">Esta aplicação usa as seguintes bibliotecas de terceiros para facilitar a minha vida. Obrigado.</string>

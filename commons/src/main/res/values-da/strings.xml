@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annuller</string>
+    <string name="later">Senere</string>
     <string name="save_as">Gem som</string>
     <string name="file_saved">Fil gemt</string>
     <string name="invalid_file_format">Ugyldigt filformat</string>
@@ -213,7 +214,8 @@
     <string name="background_color">Baggrundsfarve</string>
     <string name="text_color">Tekstfarve</string>
     <string name="primary_color">Primær farve</string>
-    <string name="accent_color_white">Accent color of white theme</string>
+    <string name="accent_color_white">Effektfarve på det hvide udseende</string>
+    <string name="accent_color_black_and_white">Effektfarve på det sorte &amp; hvide udseende</string>
     <string name="foreground_color">Forgrundsfarve</string>
     <string name="app_icon_color">Farve til appens ikon</string>
     <string name="bottom_navigation_bar_color">Farve på nederste navigationslinje</string>
@@ -278,6 +280,8 @@
     <string name="call_from_sim_1">Call from SIM 1</string>
     <string name="call_from_sim_2">Call from SIM 2</string>
     <string name="toggle_filename">Skift filnavnets synlighed</string>
+    <string name="move_to_top">Flyt til toppen</string>
+    <string name="move_to_bottom">Flyt til bunden</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorter efter</string>
@@ -349,6 +353,9 @@
     <string name="minutes_raw">minutter</string>
     <string name="hours_raw">timer</string>
     <string name="days_raw">dage</string>
+    <string name="seconds_letter">s</string>
+    <string name="minutes_letter">m</string>
+    <string name="hours_letter">h</string>
 
     <plurals name="seconds">
         <item quantity="one">%d sekund</item>
@@ -486,8 +493,8 @@
     <string name="your_sounds">Dine lyde</string>
     <string name="add_new_sound">Tilføj en ny lyd</string>
     <string name="no_sound">Ingen lyd</string>
-    <string name="during_day_at_hh_mm">During the day at hh:mm</string>
-    <string name="during_day_at">During the day at %02d:%02d</string>
+    <string name="during_day_at_hh_mm">I løbet af dagen kl. hh:mm</string>
+    <string name="during_day_at">I løbet af dagen kl. %02d:%02d</string>
 
     <!-- Settings -->
     <string name="settings">Indstillinger</string>
@@ -540,13 +547,16 @@
     <string name="text">Tekst</string>
     <string name="migrating">Migrerer</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Administrer viste faner</string>
     <string name="default_tab_to_open">Tab to open at app start</string>
     <string name="contacts_tab">Kontakter</string>
     <string name="favorites_tab">Foretrukne</string>
     <string name="call_history_tab">Opkaldshistorik</string>
     <string name="groups_tab">Grupper</string>
     <string name="last_used_tab">Senest brugte</string>
+    <string name="files_tab">Filer</string>
+    <string name="recent_files_tab">Seneste filer</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Gendan denne fil</string>
@@ -680,6 +690,12 @@
     <string name="rate_us_prompt">Hej\n\nDet ser ud til at du har brugt denne app et godt stykke tid, og det er vi virkelig glade for.\n\nHvis vi til gengæld må bede om en tjeneste, vil vi sætte stor pris på din vurdering på Google Play. Det ville være en kæmpe hjælp.\n\nUanset hvad du beslutter dig for, vil du ikke se denne besked igen.\n\nPå forhånd tak!</string>
     <string name="rate_our_app">Vurder vores app :)</string>
     <string name="thank_you">Tak skal du have</string>
+    <string name="widget_locked_pro">The widget is locked.\nPlease upgrade to the Pro version to unlock it.</string>
+    <string name="widget_locked">
+        <![CDATA[
+            Widget\'en er låst.<br>Køb venligst <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> for at åbne den.
+        ]]>
+    </string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -771,6 +787,7 @@
     <string name="why_upgrade_no_ads">Ingen reklamer</string>
     <string name="why_upgrade_no_internet_access">Ingen internetadgang</string>
     <string name="why_upgrade_footer">+ Fuld tilfredshed eller pengene tilbage</string>
+    <string name="why_upgrade_improved_design">Forbedret design</string>
 
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Avanceret fotoredigering</string>
@@ -789,19 +806,24 @@
     <string name="why_upgrade_duplicate_contact_merging">Forbedret sammenfletning af duplikerede kontakter</string>
     <string name="why_upgrade_font_size_customization">Skræddersyet skriftstørrelse</string>
     <string name="why_upgrade_private_contact_sharing">Mulighed for deling af private kontakter med dine apps</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Kontaktspecifikke ringetoner</string>
+    <string name="why_upgrade_contact_filtering">Kontaktfiltrering</string>
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Tjeklister</string>
     <string name="why_upgrade_different_note_per_widget">Forskellig note og farver per widget</string>
+    <string name="why_upgrade_note_locking">Note-låsning</string>
 
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Tilpasning af format på dato og tid</string>
     <string name="why_upgrade_shortcuts">Genveje til startside</string>
     <string name="why_upgrade_file_compression">Understøtter pakning af filer</string>
+    <string name="why_upgrade_recents_tab">Fane med seneste filer</string>
 
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Selvvalgt baggrundsfarve</string>
     <string name="why_upgrade_file_importing">Understøtter filimport</string>
+    <string name="why_upgrade_zooming">Zooming</string>
 
     <!-- License -->
     <string name="notice">Denne app bruger følgende 3.-parts biblioteker der gør at mit liv bliver lidt enklere. Tak.</string>

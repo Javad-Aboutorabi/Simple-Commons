@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Cancel·lar</string>
+    <string name="later">Later</string>
     <string name="save_as">Desar com</string>
     <string name="file_saved">Arxiu desat amb éxit</string>
     <string name="invalid_file_format">Format d\'arxiu no vàlid</string>
@@ -213,7 +214,8 @@
     <string name="background_color">Color del fons</string>
     <string name="text_color">Color del text</string>
     <string name="primary_color">Color principal</string>
-    <string name="accent_color_white">Accent color of white theme</string>
+    <string name="accent_color_white">Color accent del tema blanc</string>
+    <string name="accent_color_black_and_white">Color d\’accent del tema en blanc i negre</string>
     <string name="foreground_color">Color de primer pla</string>
     <string name="app_icon_color">Color de la icona d\'aplicació</string>
     <string name="bottom_navigation_bar_color">Color de la barra de navegació inferior</string>
@@ -278,6 +280,8 @@
     <string name="call_from_sim_1">Truca des de la SIM 1</string>
     <string name="call_from_sim_2">Truca des de la SIM 2</string>
     <string name="toggle_filename">Canviar la visibilitat del nom d’arxiu</string>
+    <string name="move_to_top">Desplaceu-vos a la part superior</string>
+    <string name="move_to_bottom">Desplaceu-vos cap a la part inferior</string>
 
     <!-- Sorting -->
     <string name="sort_by">Ordenar per</string>
@@ -349,6 +353,9 @@
     <string name="minutes_raw">minuts</string>
     <string name="hours_raw">hores</string>
     <string name="days_raw">dies</string>
+    <string name="seconds_letter">s</string>
+    <string name="minutes_letter">m</string>
+    <string name="hours_letter">h</string>
 
     <plurals name="seconds">
         <item quantity="one">%d segon</item>
@@ -540,13 +547,16 @@
     <string name="text">Text</string>
     <string name="migrating">Migrant</string>
 
-    <!-- Default tabs to open -->
-    <string name="default_tab_to_open">Tab to open at app start</string>
-    <string name="contacts_tab">Contacts</string>
-    <string name="favorites_tab">Favorites</string>
-    <string name="call_history_tab">Call History</string>
-    <string name="groups_tab">Groups</string>
-    <string name="last_used_tab">Last used one</string>
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Gestioneu les pestanyes mostrades</string>
+    <string name="default_tab_to_open">Pestanya per obrir-la a l\'inici de l\'aplicació</string>
+    <string name="contacts_tab">Contactes</string>
+    <string name="favorites_tab">Favorits</string>
+    <string name="call_history_tab">Historial de trucades</string>
+    <string name="groups_tab">Grups</string>
+    <string name="last_used_tab">Darrer utilitzat</string>
+    <string name="files_tab">Fitxers</string>
+    <string name="recent_files_tab">Fitxers recents</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Restaura aquest fitxer</string>
@@ -680,6 +690,12 @@
     <string name="rate_us_prompt">Hola,\n\nsembla que esteu utilitzant aquesta aplicació ja des de fa molt de temps, i ho agraïm realment.\n\nSi us demanem un favor, cal que ens puntueu a Google Play. En realitat, això ens ajudarà molt.\n\nNo importa que decidiu, no tornareu a veure aquest missatge.\n\nGràcies</string>
     <string name="rate_our_app">Valora la nostra aplicació si us plau :)</string>
     <string name="thank_you">Gràcies</string>
+    <string name="widget_locked_pro">El widget està bloquejat. \nActualitzeu la versió Pro per desbloquejar-lo.</string>
+    <string name="widget_locked">
+        <![CDATA[
+            El widget està bloquejat. <br> Compreu <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> per debloquejar-lo.
+        ]]>
+    </string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -772,6 +788,7 @@
     <string name="why_upgrade_no_ads">Sense anuncis</string>
     <string name="why_upgrade_no_internet_access">No hi ha accés a Internet</string>
     <string name="why_upgrade_footer">+ 100% de garantia de devolució</string>
+    <string name="why_upgrade_improved_design">Disseny millorat</string>
 
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Editor de fotos avançat</string>
@@ -790,19 +807,24 @@
     <string name="why_upgrade_duplicate_contact_merging">S\'ha millorat la combinació de contactes duplicats</string>
     <string name="why_upgrade_font_size_customization">Personalització de la mida del tipus de lletra</string>
     <string name="why_upgrade_private_contact_sharing">Compartir contactes privats opcionals a les nostres aplicacions</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Tons de contacte personalitzables</string>
+    <string name="why_upgrade_contact_filtering">Contact filtering</string>
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Llistes de comprovació</string>
     <string name="why_upgrade_different_note_per_widget">Nota i colors diferents per widget</string>
+    <string name="why_upgrade_note_locking">Bloqueja la nota</string>
 
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Personalització del format de data i hora</string>
     <string name="why_upgrade_shortcuts">Dreceres de pantalla inicial</string>
     <string name="why_upgrade_file_compression">Suport de compressió de fitxers</string>
+    <string name="why_upgrade_recents_tab">Pestanya amb fitxers recents</string>
 
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Personalització del color de fons</string>
     <string name="why_upgrade_file_importing">Suport per a la importació de fitxers</string>
+    <string name="why_upgrade_zooming">Zooming</string>
 
     <!-- License -->
     <string name="notice">Aquesta aplicació fa servir les següents biblioteques de tercers que ens faciliten la feina. Gràcies.</string>

@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Annuleren</string>
+    <string name="later">Later</string>
     <string name="save_as">Opslaan als</string>
     <string name="file_saved">Bestand opgeslagen</string>
     <string name="invalid_file_format">Ongeldig bestandsformaat</string>
@@ -214,6 +215,7 @@
     <string name="text_color">Tekstkleur</string>
     <string name="primary_color">Primaire kleur</string>
     <string name="accent_color_white">Accent voor wit thema</string>
+    <string name="accent_color_black_and_white">Accent voor zwart-wit thema</string>
     <string name="foreground_color">Kleur voorgrond</string>
     <string name="app_icon_color">Kleur app-icoon</string>
     <string name="bottom_navigation_bar_color">Kleur navigatiebalk onder aan het scherm</string>
@@ -278,6 +280,8 @@
     <string name="call_from_sim_1">Met SIM 1 bellen</string>
     <string name="call_from_sim_2">Met SIM 2 bellen</string>
     <string name="toggle_filename">Bestandsnamen tonen</string>
+    <string name="move_to_top">Bovenaan zetten</string>
+    <string name="move_to_bottom">Onderaan zetten</string>
 
     <!-- Sorting -->
     <string name="sort_by">Sorteren op</string>
@@ -349,6 +353,9 @@
     <string name="minutes_raw">minuten</string>
     <string name="hours_raw">uren</string>
     <string name="days_raw">dagen</string>
+    <string name="seconds_letter">s</string>
+    <string name="minutes_letter">m</string>
+    <string name="hours_letter">u</string>
 
     <plurals name="seconds">
         <item quantity="one">%d seconde</item>
@@ -540,13 +547,16 @@
     <string name="text">Tekst</string>
     <string name="migrating">Migreren</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Tabs tonen/verbergen</string>
     <string name="default_tab_to_open">Tab openen bij opstarten</string>
     <string name="contacts_tab">Contacten</string>
     <string name="favorites_tab">Favorieten</string>
     <string name="call_history_tab">Oproepgeschiedenis</string>
     <string name="groups_tab">Groepen</string>
     <string name="last_used_tab">Laatst gebruikt</string>
+    <string name="files_tab">Bestanden</string>
+    <string name="recent_files_tab">Recente bestanden</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Bestand herstellen</string>
@@ -680,6 +690,12 @@
     <string name="rate_us_prompt">Hallo,\n\nhet lijkt erop dat u deze app al een tijdje gebruikt, iets wat wij enorm waarderen.\n\nMogen we zo vrij zijn om u te vragen ons een beoordeling te geven op Google Play? Daarmee kunt u ons enorm helpen.\n\nDit bericht zal niet nogmaals worden getoond, ongeacht welke keuze u nu maakt.\n\nHartelijk dank!</string>
     <string name="rate_our_app">Beoordeel onze app! :)</string>
     <string name="thank_you">Bedankt!</string>
+    <string name="widget_locked_pro">De widget is vergrendeld.\nUpgrade naar de Pro-versie om te ontgrendelen.</string>
+    <string name="widget_locked">
+        <![CDATA[
+            Deze widget is vergrendeld.<br>Het aanschaffen van <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Eenvoudig Bedankje</a> is nodig om deze widget te kunnen gebruiken.
+        ]]>
+    </string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -690,7 +706,7 @@
             <a href="%3$s">%4$s</a><br><br>
             <a href="%5$s">%6$s</a><br><br>
             Download de app door op de naam hierboven te klikken.<br><br>
-            Dank u wel!
+            Bedankt!
         ]]>
     </string>
 
@@ -771,6 +787,7 @@
     <string name="why_upgrade_no_ads">Geen advertenties</string>
     <string name="why_upgrade_no_internet_access">Geen internetverbinding nodig</string>
     <string name="why_upgrade_footer">+ 100% Niet-goed-geld-teruggarantie</string>
+    <string name="why_upgrade_improved_design">Verbeterd design</string>
 
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Geavanceerde fotobewerking</string>
@@ -789,19 +806,24 @@
     <string name="why_upgrade_duplicate_contact_merging">Verbeterd samenvoegen van dubbele contacten</string>
     <string name="why_upgrade_font_size_customization">Lettergroottes aanpassen</string>
     <string name="why_upgrade_private_contact_sharing">Privécontacten alleen binnen onze apps delen (optioneel)</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Ringtones per contact instellen</string>
+    <string name="why_upgrade_contact_filtering">Contact filtering</string>
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Checklists</string>
     <string name="why_upgrade_different_note_per_widget">Verschillende notities en kleuren per widget</string>
+    <string name="why_upgrade_note_locking">Notities vergrendelen</string>
 
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Formaat datum en tijd aanpassen</string>
     <string name="why_upgrade_shortcuts">Snelkoppelingen op het startscherm</string>
     <string name="why_upgrade_file_compression">Ondersteuning voor bestandscompressie</string>
+    <string name="why_upgrade_recents_tab">Tab met recente bestanden</string>
 
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Achtergrondkleur aanpassen</string>
     <string name="why_upgrade_file_importing">Bestanden importeren</string>
+    <string name="why_upgrade_zooming">Zoomen</string>
 
     <!-- License -->
     <string name="notice">Deze app maakt gebruik van de volgende libraries om het mij wat gemakkelijker te maken. Dank hiervoor.</string>

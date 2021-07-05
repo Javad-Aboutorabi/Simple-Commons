@@ -20,5 +20,17 @@ class MainActivity : BaseSimpleActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         appLaunched(BuildConfig.APPLICATION_ID)
+
+        /*val letters = arrayListOf("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q")
+        StringsAdapter(this, letters, media_grid, media_refresh_layout) {
+        }.apply {
+            media_grid.adapter = this
+        }
+
+        media_refresh_layout.setOnRefreshListener {
+            Handler().postDelayed({
+                media_refresh_layout.isRefreshing = false
+            }, 1000L)
+        }*/
     }
 }

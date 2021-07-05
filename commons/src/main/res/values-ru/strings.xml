@@ -1,6 +1,7 @@
 <resources>
     <string name="ok">OK</string>
     <string name="cancel">Отмена</string>
+    <string name="later">Позже</string>
     <string name="save_as">Сохранить как</string>
     <string name="file_saved">Файл сохранён</string>
     <string name="invalid_file_format">Неправильный формат файла</string>
@@ -218,6 +219,7 @@
     <string name="text_color">Цвет текста</string>
     <string name="primary_color">Основной цвет</string>
     <string name="accent_color_white">Цвет акцента белой темы</string>
+    <string name="accent_color_black_and_white">Цвет акцента чёрно-белой темы</string>
     <string name="foreground_color">Цвет переднего плана</string>
     <string name="app_icon_color">Цвет значка приложения</string>
     <string name="bottom_navigation_bar_color">Цвет нижней панели навигации</string>
@@ -282,6 +284,8 @@
     <string name="call_from_sim_1">Вызов с SIM 1</string>
     <string name="call_from_sim_2">Вызов с SIM 2</string>
     <string name="toggle_filename">Переключить отображение имени файла</string>
+    <string name="move_to_top">Переместить наверх</string>
+    <string name="move_to_bottom">Переместить вниз</string>
 
     <!-- Sorting -->
     <string name="sort_by">Сортировать по…</string>
@@ -354,6 +358,9 @@
     <string name="minutes_raw">минут</string>
     <string name="hours_raw">часов</string>
     <string name="days_raw">дней</string>
+    <string name="seconds_letter">с</string>
+    <string name="minutes_letter">м</string>
+    <string name="hours_letter">ч</string>
 
     <plurals name="seconds">
         <item quantity="one">%d секунда</item>
@@ -525,10 +532,10 @@
     <!-- Settings -->
     <string name="settings">Настройки</string>
     <string name="purchase_simple_thank_you">Купить Simple Thank You</string>
-    <string name="customize_colors">Настройки интерфейса</string>
-    <string name="customize_colors_locked">Настройки интерфейса (заблокировано)</string>
-    <string name="customize_widget_colors">Настроить цвета виджета</string>
-    <string name="customize_notifications">Настроить уведомления</string>
+    <string name="customize_colors">Настройка интерфейса</string>
+    <string name="customize_colors_locked">Настройка интерфейса (заблокировано)</string>
+    <string name="customize_widget_colors">Настройка цветов виджета</string>
+    <string name="customize_notifications">Настройка уведомлений</string>
     <string name="use_english_language">Использовать английский язык</string>
     <string name="show_hidden_items">Показывать скрытые папки</string>
     <string name="font_size">Размер шрифта</string>
@@ -560,7 +567,7 @@
     <string name="settings_exported_successfully">Настройки успешно экспортированы </string>
     <string name="settings_imported_successfully">Настройки успешно импортированы</string>
     <string name="start_name_with_surname">Показывать сначала фамилию</string>
-    <string name="clear_cache">Очистить кеш</string>
+    <string name="clear_cache">Очистка кеша</string>
 
     <!-- Setting sections -->
     <string name="visibility">Отображение</string>
@@ -573,13 +580,16 @@
     <string name="text">Текст</string>
     <string name="migrating">Перенос</string>
 
-    <!-- Default tabs to open -->
+    <!-- Default tab to open -->
+    <string name="manage_shown_tabs">Управление отображаемыми вкладками</string>
     <string name="default_tab_to_open">Открываемая при запуске вкладка</string>
     <string name="contacts_tab">Контакты</string>
     <string name="favorites_tab">Избранное</string>
     <string name="call_history_tab">История вызовов</string>
     <string name="groups_tab">Группы</string>
     <string name="last_used_tab">Последняя использованная</string>
+    <string name="files_tab">Файлы</string>
+    <string name="recent_files_tab">Недавние файлы</string>
 
     <!-- Recycle Bin -->
     <string name="restore_this_file">Восстановить этот файл</string>
@@ -714,6 +724,12 @@
     <string name="rate_us_prompt">Привет,\n\nпохоже, вы уже давно используете данное приложение и мы очень ценим это.\n\nНе могли бы вы оказать нам услугу и оценить его в Google Play? Это действительно очень нам поможет.\n\nНезависимо от вашего решения данное сообщение больше не появится.\n\nСпасибо!</string>
     <string name="rate_our_app">Оцените приложение, пожалуйста :)</string>
     <string name="thank_you">Спасибо</string>
+    <string name="widget_locked_pro">Виджет заблокирован.\nПерейдите на версию Pro, чтобы разблокировать его.</string>
+    <string name="widget_locked">
+        <![CDATA[
+            Виджет заблокирован.<br>Пожалуйста, купите <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a>, чтобы его разблокировать.
+        ]]>
+    </string>
 
     <!-- New app (do not translate anything on the 4th line) -->
     <string name="new_app">
@@ -807,6 +823,7 @@
     <string name="why_upgrade_no_ads">Никакой рекламы</string>
     <string name="why_upgrade_no_internet_access">Без доступа к интернету</string>
     <string name="why_upgrade_footer">+ 100% гарантия возврата денег</string>
+    <string name="why_upgrade_improved_design">Улучшенный дизайн</string>
 
     <!-- Gallery Pro -->
     <string name="why_upgrade_advanced_photo_editor">Мощный фоторедактор</string>
@@ -825,19 +842,24 @@
     <string name="why_upgrade_duplicate_contact_merging">Улучшенная функция слияния контактов</string>
     <string name="why_upgrade_font_size_customization">Настройка размера шрифта</string>
     <string name="why_upgrade_private_contact_sharing">Дополнительный обмен конфиденциальными контактами в наших приложениях</string>
+    <string name="why_upgrade_customizable_contact_ringtones">Настройка мелодии вызова для контакта</string>
+    <string name="why_upgrade_contact_filtering">Контактная фильтрация</string>
 
     <!-- Notes Pro -->
     <string name="why_upgrade_checklists">Контрольные списки</string>
     <string name="why_upgrade_different_note_per_widget">Разные заметки и цвета для каждого виджета</string>
+    <string name="why_upgrade_note_locking">Блокировка заметок</string>
 
     <!-- File Manager Pro -->
     <string name="why_upgrade_date_and_time_format">Настройка формата даты и времени</string>
     <string name="why_upgrade_shortcuts">Ярлыки на главном экране</string>
     <string name="why_upgrade_file_compression">Поддержка сжатия файлов</string>
+    <string name="why_upgrade_recents_tab">Вкладка с недавними файлами</string>
 
     <!-- Draw Pro -->
     <string name="why_upgrade_background_color_customization">Настройка цвета фона</string>
     <string name="why_upgrade_file_importing">Поддержка импорта файлов</string>
+    <string name="why_upgrade_zooming">Масштабирование</string>
 
     <!-- License -->
     <string name="notice">Это приложение использует следующие библиотеки сторонних разработчиков, облегчающие мой труд. Спасибо им.</string>
@@ -877,5 +899,5 @@
     <string name="pro_app_refund">Не забывайте, что если вы удалите любое платное приложение в течение 2 часов, вам будет автоматически возвращена сумма покупки. Если вы захотите вернуть деньги позднее, просто свяжитесь с нами по адресу hello@simplemobiletools.com и вы их получите. Так что можно легко опробовать это приложение :)</string>
 
     <!-- Description of our developer profile on Google Play, it can have max 140 characters -->
-    <string name="developer_description">Группа простых приложений для Android с открытым исходным кодом с настраиваемыми виджетами, без рекламы и ненужных разрешений.</string>
+    <string name="developer_description">Группа простых приложений для Android с открытым исходным кодом с настраиваемыми виджетами без рекламы и ненужных разрешений.</string>
 </resources>
